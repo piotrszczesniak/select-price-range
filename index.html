@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Price Range Selector</title>
+  </head>
+  <body>
+    <div class="section">
+      <div class="price-range__wrapper">
+        <div class="price-range__control">
+          <button class="price-range__btn-left">Left</button>
+          <div class="price-range__output">
+            <span class="price-range__data"></span>
+          </div>
+          <button class="price-range__btn-right">Right</button>
+        </div>
+        <input class="price-range__range" type="range" name="price-range" id="price-range" min="100" max="10000" step="50" value="2000" />
+      </div>
+      <div class="price-plan__wrapper">
+        <span class="price-plan__data">Free</span>
+      </div>
+    </div>
+    <script src="/app.js"></script>
+  </body>
+</html>

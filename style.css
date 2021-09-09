@@ -1,0 +1,62 @@
+.section {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.price-range__wrapper {
+  text-align: center;
+}
+
+.price-range__control {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.price-range__range {
+  position: relative;
+}
+
+.price-range__range:before {
+  content: '100';
+  position: absolute;
+  top: 0;
+  left: -25px;
+}
+
+.price-range__range:after {
+  content: '10000';
+  position: absolute;
+  top: 0;
+  right: -40px;
+}
+
+.price-range__output {
+  text-align: center;
+}
+
+.price-range__data {
+  font-size: 2rem;
+  display: inline-block;
+  min-width: 100px;
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+}
+/*# sourceMappingURL=style.css.map */

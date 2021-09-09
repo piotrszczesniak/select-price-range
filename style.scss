@@ -1,0 +1,47 @@
+.section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.price-range {
+  &__wrapper {
+    text-align: center;
+  }
+
+  &__control {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  &__range {
+    position: relative;
+
+    &:before {
+      content: '100';
+      position: absolute;
+      top: 0;
+      left: -25px;
+    }
+
+    &:after {
+      content: '10000';
+      position: absolute;
+      top: 0;
+      right: -40px;
+    }
+  }
+
+  &__output {
+    text-align: center;
+  }
+
+  &__data {
+    font-size: 2rem;
+    display: inline-block;
+    min-width: 100px;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+  }
+}
