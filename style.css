@@ -1,5 +1,5 @@
-.section {
-  height: 100vh;
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");
+body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -9,54 +9,61 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  height: 90vh;
 }
 
-.price-range__wrapper {
-  text-align: center;
+.controller {
+  background-color: #3c63fc;
+  border-radius: 12px;
+  border: none;
+  padding: 3rem 4rem;
 }
 
-.price-range__control {
+.controller__buttons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 3rem;
 }
 
-.price-range__range {
-  position: relative;
+.controller__buttons button {
+  background-color: #00cdb1;
+  width: 45px;
+  height: 45px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
 }
 
-.price-range__range:before {
-  content: '100';
-  position: absolute;
-  top: 0;
-  left: -25px;
+.controller__buttons i {
+  color: white;
+  font-weight: bolder;
 }
 
-.price-range__range:after {
-  content: '10000';
-  position: absolute;
-  top: 0;
-  right: -40px;
-}
-
-.price-range__output {
+.controller__data {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  font-weight: bolder;
   text-align: center;
 }
 
-.price-range__data {
-  font-size: 2rem;
-  display: inline-block;
-  min-width: 100px;
-  margin-right: 0.5rem;
-  margin-left: 0.5rem;
+.controller__slider {
+  width: 100%;
+}
+
+.controller input[type='range']::-moz-range-progress {
+  background-color: green;
+  height: 1em;
+}
+
+.controller input[type='number']::-webkit-inner-spin-button,
+.controller input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 /*# sourceMappingURL=style.css.map */

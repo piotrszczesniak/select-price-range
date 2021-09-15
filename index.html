@@ -8,20 +8,16 @@
     <title>Price Range Selector</title>
   </head>
   <body>
-    <div class="section">
-      <div class="price-range__wrapper">
-        <div class="price-range__control">
-          <button class="price-range__btn-left">Left</button>
-          <div class="price-range__output">
-            <span class="price-range__data"></span>
-          </div>
-          <button class="price-range__btn-right">Right</button>
-        </div>
-        <input class="price-range__range" type="range" name="price-range" id="price-range" min="100" max="10000" step="50" value="2000" />
+    <div class="controller">
+      <div class="controller__buttons">
+        <button class="controller__btn-left" type="button"><i class="bi bi-chevron-left"></i></button>
+
+        <input class="controller__data" type="number" step="1" value="100" min="100" max="10000"  />
+
+        <button class="controller__btn-right" type="button"><i class="bi bi-chevron-right"></i></button>
       </div>
-      <div class="price-plan__wrapper">
-        <span class="price-plan__data">Free</span>
-      </div>
+      
+      <input type="range" value="100" step="5" min="100" max="10000" class="controller__slider"></input>
     </div>
     <script src="/app.js"></script>
   </body>

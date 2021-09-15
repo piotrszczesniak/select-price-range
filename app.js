@@ -1,24 +1,32 @@
-let priceRange = document.querySelector('.price-range__range');
-let priceData = document.querySelector('.price-range__data');
-let planData = document.querySelector('.price-plan__data');
-let btnLeft = document.querySelector('.price-range__btn-left');
-let btnRight = document.querySelector('.price-range__btn-right');
+window.onload = function () {
+  increaseNum();
+  decreaseNum();
+  slideNum();
+};
 
-priceData.innerText = priceRange.getAttribute('value');
+let btnLeft = document.querySelector('.controller__btn-left');
+let btnRight = document.querySelector('.controller__btn-right');
+let input = document.querySelector('.controller__data');
+let slider = document.querySelector('.controller__slider');
 
-priceRange.addEventListener('input', (e) => {
-  let currentValue = e.target.value;
-  priceData.innerText = currentValue;
+function increaseNum() {
+  btnRight.addEventListener('click', () => {
+    if (input.value < 10000) {
+      input.value = parseInt(input.value) + 1;
+    }
+  });
+}
 
-  if (currentValue < 2500) {
-    planData.innerText = 'Free';
-  } else if (currentValue < 5000) {
-    planData.innerText = 'Premium';
-  } else if (currentValue < 7500) {
-    planData.innerText = 'Enterprise';
-  }
-});
+function decreaseNum() {
+  btnLeft.addEventListener('click', () => {
+    if (input.value > 100) {
+      input.value = parseInt(input.value) - 1;
+    }
+  });
+}
 
-btnLeft.addEventListener('click', (e) => {});
-
-btnRight.addEventListener('click', (e) => {});
+function slideNum() {
+  slider.addEventListener('input', (e) => {
+    input.value = e.target.value;
+  });
+}

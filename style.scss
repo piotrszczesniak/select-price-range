@@ -1,47 +1,59 @@
-.section {
-  height: 100vh;
+@import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css');
+
+body {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  height: 90vh;
 }
-.price-range {
-  &__wrapper {
-    text-align: center;
-  }
 
-  &__control {
+.controller {
+  background-color: #3c63fc;
+  border-radius: 12px;
+  border: none;
+  padding: 3rem 4rem;
+
+  &__buttons {
     display: flex;
-    align-items: center;
-    justify-content: space-around;
-  }
-  &__range {
-    position: relative;
+    justify-content: center;
+    margin-bottom: 3rem;
 
-    &:before {
-      content: '100';
-      position: absolute;
-      top: 0;
-      left: -25px;
+    button {
+      background-color: #00cdb1;
+      width: 45px;
+      height: 45px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
     }
 
-    &:after {
-      content: '10000';
-      position: absolute;
-      top: 0;
-      right: -40px;
+    i {
+      color: white;
+      font-weight: bolder;
     }
-  }
-
-  &__output {
-    text-align: center;
   }
 
   &__data {
+    background-color: transparent;
+    border: none;
+    color: white;
     font-size: 2rem;
-    display: inline-block;
-    min-width: 100px;
-    margin-right: 0.5rem;
-    margin-left: 0.5rem;
+    font-weight: bolder;
+    text-align: center;
+  }
+
+  &__slider {
+    width: 100%;
+  }
+
+  input[type='range']::-moz-range-progress {
+    background-color: green;
+    height: 1em;
+  }
+  // disable arrows for input type number
+  input[type='number']::-webkit-inner-spin-button,
+  input[type='number']::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
   }
 }
